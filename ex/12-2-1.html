@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //window.navigator 的範例
+        var sBrowser, sUsrAg = navigator.userAgent;
+    
+        console.log(navigator.userAgent);
+        document.write(navigator.userAgent);
+        document.write('<hr>');
+    
+        if(sUsrAg.indexOf("Mobile") > -1) {
+            sBrowser = "手機的瀏覽器";
+        } else {
+            sBrowser = "個人電腦(桌機)的瀏覽器";
+        }
+    
+        document.write("您正在使用: " + sBrowser);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

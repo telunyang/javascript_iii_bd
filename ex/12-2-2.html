@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="javascript:void();" onclick="visit('https://www.bookwormzz.com/zh/')">超連結</a>
+    <hr>
+
+    <script>
+    //window.location 的範例
+    document.write('目前頁面: ' + window.location.href + '<br />');
+    document.write('目前網域名稱: ' + window.location.hostname + '<br />');
+    document.write('目前頁面路徑: ' + window.location.pathname + '<br />');
+    document.write('目前通訊協定: ' + window.location.protocol + '<br />');
+    document.write('目前 port 號: ' + window.location.port + '<br />');
+
+    //跳到指定網址
+    function visit(url){
+        window.location.href = url;
+    }
+    </script>
+</body>
+</html>
