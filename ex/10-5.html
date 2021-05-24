@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //暱名函式風格的箭頭函式
+        let say = () => {
+            console.log('Hello World!');
+        }
+        say();
+    
+
+        //帶參數的箭頭函式
+        let greet = (name) => {
+            return 'Hello, ' + name;
+        };
+        console.log( greet('Bill') );
+    
+
+        //帶兩個參數的箭頭函式
+        let sum = (num1, num2) => num1 + num2;
+        console.log( sum(10, 20) );
+    
+
+        //帶參數，未加 () 的箭頭函式
+        let getValue = value => value + ',' + value;
+        console.log( getValue('Ha') );
+
+        
+        //箭頭函式版本 IIFE
+        (() => {
+            let strName = "Beryl";
+            console.log(`Hello, ${strName}`);
+        })();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

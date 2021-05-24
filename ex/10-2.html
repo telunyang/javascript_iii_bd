@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //建立回呼函式
+        function say(name, callback_function){
+            callback_function(`Hi, [${name}] … how have you been ?`);
+        }
+
+        //執行回呼函式
+        say('Darren', function(str){
+            alert(str);
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
