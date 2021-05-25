@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn_request">取得 JSON 字串</button>
+    <div id="content"></div>
+    
+    <script>
+    //取得 JSON 字串
+    document.querySelector('button#btn_request').addEventListener('click', function(event){
+        //實體化
+        var xhr = new XMLHttpRequest();
+
+        //建立連線
+        xhr.open('get','https://data.taipei/opendata/datalist/apiAccess?scope=datasetMetadataSearch');
+
+        //執行連線 (request 請求)
+        xhr.send();
+
+        //連線開啟時的 callback 函式
+        xhr.onloadstart = function(){
+            console.log('連線開始')
+        }
+
+        //連線時的 callback 函式
+        xhr.onload = function(){
+            console.log('連線中')
+
+            //取得回應的內容
+            console.log(this.responseText);
+
+            //將取得回應的內容，放到元素內文當中
+            document.querySelector('div#content').innerHTML = this.responseText;
+        }
+
+        //連線結束後的 callback 函式
+        xhr.onloadend = function(){
+            console.log('連線結束')
+        }
+    });
+    </script>
+</body>
+</html>
