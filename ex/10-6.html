@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //以 function 這個關鍵字的來建立類別（class）
+    var Person = function (name, gender, age) {
+        //以 this 關鍵字作為實體本身
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        this.getAge = function(){
+            return this.age;
+        }
+    };
+
+    //使用 prototype，為 Person 類別定義了方法 sayHello()
+    //共同的屬性或方法，不見得一定要在類別中定義
+    //也可以透過 prototype 來建立 Person 原型的方法
+    Person.prototype.sayHello = function() {
+        return "Hello, I'm " + this.name;
+    };
+        
+    //用 new 關鍵字來實體化（變成物件）
+    var person1 = new Person("Alice", "女", 22);
+    var person2 = new Person("Bill", "男", 18);
+
+    //輸出兩個 person 的 name
+    console.log( person1.name );
+    console.log( person2.name );
+
+    //取得 person1 的 age 值
+    console.log( person1.getAge() );
+
+    //取得 person2 的 age 值
+    console.log( person2.getAge() );
+
+    // "Hello, I'm Alex"
+    console.log( person1.sayHello() );
+    
+    // "Hello, I'm Bob"
+    console.log( person2.sayHello() ); 
+    </script>
+</body>
+</html>
