@@ -16,10 +16,9 @@
         fetch('https://data.taipei/opendata/datalist/apiAccess?scope=datasetMetadataSearch', {
             //RESTful 方法，常見的有 GET, POST, PUT, DELETE
             method: 'GET', 
-            //設定標頭: 指明使用者代理為桌面瀏覽器，同時要求後端伺服器回傳的格式是 json
+            //設定標頭: 指明使用者代理為桌面瀏覽器
             headers: { 
-                'user-agent': 'Mozilla/4.0 MDN Example',
-                'content-type': 'application/json'
+                'user-agent': 'Mozilla/4.0 MDN Example'
             }
             //傳遞資料的方法若為 POST，需要先設定成物件({…})，加上 body，
             //最後轉成透過 JSON.stringify() 將物件字串化，才能正確執行

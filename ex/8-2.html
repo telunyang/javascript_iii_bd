@@ -6,76 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-    //一、初始化陣列
+    //初始化陣列
     let listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
 
-    //設定（新增）元素：
+    //一、設定（新增）元素：
     listOfName[4] = 'Ellen'; // 指定索引位置來新增元素
     console.log(listOfName);
-    //輸出 [ 'Alex', 'Bill', 'Cook', 'Darren', 'Ellen' ] 
+    //輸出 [ 'Alex', 'Bill', 'Cook', 'Darren', 'Ellen'] 
 
 
-
-    //二、重新初始化陣列
-    listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
-
-    //使用 push()，將資料加到陣列尾端：
-    listOfName.push('Ellen');
+    //二、使用 push()，將資料加到陣列尾端：
     listOfName.push('Fox');
+    listOfName.push('Gina');
     console.log(listOfName); 
-    //輸出 ["Alex", "Bill", "Cook", "Darren", "Ellen", "Fox"]
+    //輸出 ["Alex", "Bill", "Cook", "Darren", "Ellen", "Fox", "Gina"]
 
 
-
-    //三、重新初始化陣列
-    listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
-
-    //修改元素：
+    //三、修改元素：
     listOfName[0] = 'Allen';
     listOfName[2] = 'Carl';
     console.log(listOfName[0]); // 輸出 Allen
     console.log(listOfName[2]); // 輸出 Carl
     console.log(listOfName); 
-    // 輸出 [ 'Allen', 'Bill', 'Carl', 'Darren' ] 
+    //輸出 ["Allen", "Bill", "Carl", "Darren", "Ellen", "Fox", "Gina"]
 
 
-
-    //四、重新初始化陣列
-    listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
-
-    //刪除尾端元素，使用 pop()，將會刪除陣列尾端的資料：
+    //四、刪除尾端元素，使用 .pop()，將會刪除陣列尾端的資料：
     listOfName.pop();
-    console.log(listOfName); // 輸出 [ 'Alex', 'Bill', 'Cook' ]
+    console.log(listOfName); 
+    // 輸出 ["Allen", "Bill", "Carl", "Darren", "Ellen", "Fox"]
+
     listOfName.pop();
-    console.log(listOfName); // 輸出 [ 'Alex', 'Bill' ]
+    console.log(listOfName); 
+    // 輸出 ["Allen", "Bill", "Carl", "Darren", "Ellen"]
 
 
-
-    //五、重新初始化陣列
-    listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
-
-    //刪除尾端元素，並取出放置在新的變數中
+    //五、刪除尾端元素，並取出放置在新的變數中
     let name = listOfName.pop();
-    console.log(name); // 輸出 Darren
+    console.log(name); // 輸出 Ellen
 
 
-
-    //六、重新初始化陣列
-    listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
-
-    //刪除陣列第一個元素，使用 shift()：
+    //六、刪除陣列第一個元素，使用 shift()：
     listOfName.shift();
-    console.log(listOfName); // 輸出 [ 'Bill', 'Cook', 'Darren' ]
+    console.log(listOfName); 
+    // 輸出 ["Bill", "Carl", "Darren"]
+
     
-
-
-    //七、重新初始化陣列
-    listOfName = ['Alex', 'Bill', 'Cook', 'Darren'];
-
-    //有時候從尾端刪除的陣列資料，需要放在陣列前端，使用 unshift()：
-    let name = listOfName.pop(); // 從陣列尾端刪除 Darren
+    //七、有時候從尾端刪除的陣列資料，需要放在陣列前端，使用 unshift()：
+    name = listOfName.pop(); // 從陣列尾端刪除 Darren
     listOfName.unshift(name); // 將刪除的陣列尾端資料放到陣列前端
-    console.log(listOfName); // 輸出 [ 'Darren', 'Alex', 'Bill', 'Cook' ]
+    console.log(listOfName); // 輸出 ["Darren", "Bill", "Carl"]
     </script>
 </head>
 <body>
