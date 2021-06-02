@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 
 # 建立 Flask 物件
 app = Flask(__name__)
+app.config['JSON_AS_ASCII'] = False
 
 ''' Web API '''
 # 取得 youtube 所有列表
