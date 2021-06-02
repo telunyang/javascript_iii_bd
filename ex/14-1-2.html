@@ -18,16 +18,16 @@
     var myList = document.querySelector('ul#myList');
     
     // 建立新的 <li> 元素
-    var newList = document.createElement('li');
+    var newNode = document.createElement('li');
     
     // 建立 textNode 文字節點
     var textNode = document.createTextNode("Hello world!");
     
-    // 透過 appendChild 將 textNode 加入至 newList
-    newList.appendChild(textNode);
+    // 透過 appendChild 將 textNode 加入至 newNode
+    newNode.appendChild(textNode);
     
     // 透過 appendChild 將 newList 加入至 myList
-    myList.appendChild(newList);
+    myList.appendChild(newNode);
     </script>
 </body>
 </html>
