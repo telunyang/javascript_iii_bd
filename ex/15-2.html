@@ -19,9 +19,9 @@
         event.preventDefault();
         
         let elm = document.querySelector('input#idNum');
-        let pattern = /[A-Z]\d[0-9]{8}/;
+        let re = /^[A-Z][1-2]\d{8}$/;
         let match = null;
-        if( (match = pattern.exec( elm.value )) !== null ){
+        if(re.test( elm.value )){
             alert('身分證格式正確!');
         } else {
             alert('你的身分證格式有誤…');

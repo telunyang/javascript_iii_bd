@@ -38,6 +38,9 @@
             alert('E-mail 格式不正確');
             return false;
         }
+
+        //回傳 true，讓 onsubmit 事件可以順利觸發
+        return true;
     }
 
     //驗證 E-mail

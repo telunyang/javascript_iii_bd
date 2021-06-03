@@ -15,19 +15,13 @@
     async function getNum(num){
         return new Promise(function(resolve, reject){
             setTimeout(function(){
-                console.log(num);
-
-                document
-                .querySelector('div#content')
-                .innerHTML = `輸出數字: ${num}`;
-                
-                resolve(num);
+                document.querySelector('div#content').innerHTML = `輸出數字: ${num}`;
+                resolve();
             }, 2000);
         });
     }
 
-    document.querySelector('button#btn')
-    .addEventListener('click', async function(event){
+    document.querySelector('button#btn').addEventListener('click', async function(event){
         event.preventDefault();
         let number = 1;
         await getNum(number);
